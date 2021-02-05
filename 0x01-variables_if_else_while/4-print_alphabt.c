@@ -1,4 +1,4 @@
-nclude <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 /**
@@ -8,8 +8,8 @@ nclude <stdio.h>
  */
 int  main(void)
 {
-        int c;
-        char alph[26];
+	int c;
+	char alph[26];
 
 	alph[0] = 'a';
 	alph[1] = 'b';
