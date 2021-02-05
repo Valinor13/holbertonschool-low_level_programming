@@ -6,7 +6,7 @@
  *
  * Return: Value of None
  */
-int main(void)
+int  main(void)
 {
 	int c;
 	char alph[26];
