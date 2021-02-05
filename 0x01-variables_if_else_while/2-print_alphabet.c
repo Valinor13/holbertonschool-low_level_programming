@@ -41,7 +41,7 @@ int  main(void)
 	{
 		putchar(alph[c]);
 	}
-
+	putchar('\n');
 return (0);
 }
 
