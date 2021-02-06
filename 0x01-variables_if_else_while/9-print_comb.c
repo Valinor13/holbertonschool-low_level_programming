@@ -8,17 +8,14 @@
 int main(void)
 {
 	int num1;
-	int num2;
 
-	num2 = 0;
-
-	for (num1 = 0; num2 == 9; num1++)
+	for (num1 = 0; num1 < 10; num1++)
 	{
 		putchar(num1);
-		putchar(num2);
 		putchar(',');
 		putchar(' ');
-		num2++;
 	}
+
+	putchar('$');
 return (0);
 }
