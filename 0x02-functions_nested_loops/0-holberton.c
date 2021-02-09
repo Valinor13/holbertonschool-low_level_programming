@@ -20,12 +20,9 @@ int main(void)
 	arr[7] = 'o';
 	arr[8] = 'n';
 
-	i = 0;
-
-	while (i < 10)
+	for (i = 0; i < 10; i++)
 	{
 		_putchar(arr[i]);
-		i++;
 	}
 
 	_putchar('\n');
