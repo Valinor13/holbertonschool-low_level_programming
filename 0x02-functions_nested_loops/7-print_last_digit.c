@@ -1,5 +1,5 @@
 #include "holberton.h"
-#define _abs(int)
+
 /**
  * print_last_digit - prints the last digit of an input integer
  * @n: n defines the input integer
