@@ -2,15 +2,19 @@
 
 /**
  * _islower - will return if input is lowercase t or f
- * @parameterc: c is an input character testing for lowercase
+ * @c: c is an input character testing for lowercase
  *
  * Return: returns 1 if true and 0 if false
  */
 int _islower(int c)
 {
-	if (c < 'a' && c > 'z')
+	if (c < 97 && c > 123)
 	{
 		return (0);
 	}
-return (1);
+
+	else
+	{
+		return (1);
+	}
 }
