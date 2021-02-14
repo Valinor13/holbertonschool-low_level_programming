@@ -9,17 +9,16 @@ int main(void)
 {
 	int num1;
 
-	for (num1 = 0; num1 < 10; num1++)
+	for (num1 = 48; num1 < 58; num1++)
 	{
-		putchar(num1 + '0');
+		putchar(num1);
 
-		if (num1 < 9)
+		if (num1 < 57)
 		{
 			putchar(',');
 			putchar(' ');
 		}
 	}
 
-	putchar('$');
 return (0);
 }
