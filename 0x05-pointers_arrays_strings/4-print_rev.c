@@ -8,21 +8,37 @@
  */
 void print_rev(char *s)
 {
-	char origStr;
-	int len, x, i;
+	int i, len;
 
-	len = _strlen(*s);
-	x = len - 1;
+	len = _strlen(s);
 
-	for (i = 0; i < x; i++)
+	for (i = len - 1; i >= 0; i--)
 	{
-		origStr = s[i];
-		s[i] = s[x];
-		s[x] = origStr;
-		x--;
+		_putchar(s[i]);
 	}
 
-	_puts(s);
+	_putchar('\n');
 
 return;
 }
+
+/**
+ * _strlen - return the length of a string
+ * @s: input string
+ *
+ * Return: returns the length of the string
+ */
+int _strlen(char *s)
+{
+        int len;
+
+        len = 0;
+
+        while (s[len] != '\0')
+        {
+                len++;
+        }
+
+return (len);
+}
+
