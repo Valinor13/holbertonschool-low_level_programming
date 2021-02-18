@@ -3,24 +3,28 @@
 /**
  * *_strcat - appends one string with another string
  * @dest: destination string
- * #src: source string
+ * @src: source string
  *
  * Return: returns a character string
  */
 char *_strcat(char *dest, char *src)
 {
-	int i, len;
+	int i, x, z;
+	char *p = dest;
 
-	len = _strlen(dest);
+	x = _strlen(dest) + _strlen(src);
 
-	for (i = 0; src[i] != '\0'; i++)
+	for (i = 0; dest[i] != '\0'; i++)
 	{
-		dest[len + 1] = src[i];
+		p[i] = dest[i];
 	}
 
-	dest[len + 1] = '\0';
+	for (z = 0; i <= x; i++, z++)
+	{
+		p[i] = src[z];
+	}
 
-return (dest);
+return (p);
 }
 
 /**
