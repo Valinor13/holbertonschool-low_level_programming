@@ -1,4 +1,3 @@
-
 #include "holberton.h"
 
 /**
@@ -10,21 +9,17 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int i, x, z;
+	int i, z;
 	char *p = dest;
 
-	x = _strlen(dest) + _strlen(src);
+	i = _strlen(dest);
 
-	for (i = 0; i < n; i++)
+	for (z = 0; z < n; i++, z++)
 	{
-		if (dest[i] != '\0')
+		if (src[z] == '\0')
 		{
-		p[i] = dest[i];
+			break;
 		}
-	}
-
-	for (z = 0; i <= x || i < n; i++, z++)
-	{
 		p[i] = src[z];
 	}
 
