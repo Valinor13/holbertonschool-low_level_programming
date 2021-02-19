@@ -6,13 +6,11 @@
  */
 char *rot13(char *p)
 {
-	int i, x, len;
+	int i, x;
 	char *j = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char *z = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	len = _strlen(p);
-
-	for (i = 0; i < len - 1; i++)
+	for (i = 0; p[i] != 00; i++)
 	{
 		x = 0;
 
@@ -27,21 +25,4 @@ char *rot13(char *p)
 	}
 
 return (p);
-}
-/**
- * _strlen - return the length of a string
- * @s: input string
- *
- * Return: returns the length of the string
- */
-int _strlen(char *s)
-{
-	int len;
-
-	len = 0;
-	while (s[len] != '\0')
-	{
-	len++;
-}
-return (len);
 }
