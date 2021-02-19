@@ -10,19 +10,21 @@ char *rot13(char *p)
 	char *j = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char *z = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	x = 0;
 	len = _strlen(p);
 
-	for (i = 0; i < len; i++)
+	for (i = 0; i < len - 1; i++)
 	{
-		if (p[i] >= 65 && p[i] <= 90 || p[i] >= 97 && p[i] <= 122)
+		x = 0;
+
+		if ((p[i] >= 65 && p[i] <= 90) || (p[i] >= 97 && p[i] <= 122))
 		{
 			while (p[i] != j[x])
 			{
-				x++
+				x++;
 			}
 			p[i] = z[x];
 		}
+	}
 
 return (p);
 }
