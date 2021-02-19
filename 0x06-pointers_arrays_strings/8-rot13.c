@@ -1,5 +1,4 @@
 #include "holberton.h"
-
 /**
  * *rot13 - encodes a string with rot 13
  * @p: input string
@@ -25,14 +24,8 @@ char *rot13(char *p)
 			p[i] = z[x];
 		}
 
-		else
-		{
-			continue;
-		}
 return (p);
 }
-
-
 /**
  * _strlen - return the length of a string
  * @s: input string
@@ -48,7 +41,5 @@ int _strlen(char *s)
 	{
 	len++;
 }
-
 return (len);
 }
-
