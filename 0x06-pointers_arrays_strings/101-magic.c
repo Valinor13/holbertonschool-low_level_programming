@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+ * main - prints a[2]
+ *
+ * Return: returns 0 every time
+ */
 int main(void)
 {
 	int n;
