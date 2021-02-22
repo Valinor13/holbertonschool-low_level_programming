@@ -9,7 +9,6 @@
 char *_strchr(char *s, char c)
 {
 	int i;
-	char *r = "NULL";
 
 	for (i = 0; s[i] != 00; i++)
 	{
@@ -22,7 +21,7 @@ char *_strchr(char *s, char c)
 
 	if (s[i] == 00)
 	{
-		return (r);
+		return (0);
 	}
 
 	else
