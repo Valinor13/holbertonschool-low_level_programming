@@ -19,5 +19,13 @@ char *_strchr(char *s, char c)
 
 	}
 
-	return (&s[i]);
+	if (s[i] == 00)
+	{
+		return (00);
+	}
+
+	else
+	{
+		return (&s[i]);
+	}
 }
