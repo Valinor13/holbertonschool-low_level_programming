@@ -10,7 +10,14 @@ char *_strchr(char *s, char c)
 {
 	int i;
 
-	for (i = 0; s[i] != 00; i++)
+	i = 0;
+
+	if (s[i] == 00)
+	{
+		return (s);
+	}
+
+	for (; s[i] != 00; i++)
 	{
 		if (s[i] == c)
 		{
@@ -18,14 +25,5 @@ char *_strchr(char *s, char c)
 		}
 
 	}
-
-	if (s[i] == 00)
-	{
-		return (NULL);
-	}
-
-	else
-	{
-		return (&s[i]);
-	}
+return (&s[i]);
 }
