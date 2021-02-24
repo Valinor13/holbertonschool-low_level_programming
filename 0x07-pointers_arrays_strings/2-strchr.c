@@ -8,19 +8,14 @@
  */
 char *_strchr(char *s, char c)
 {
-	while (*s)
+	while (*s != c)
 	{
 		if (*s == 00)
 		{
 			return (NULL);
 		}
 
-		else if (*s == c)
-		{
-			return (s);
-		}
-
 		s++;
 	}
-return (0);
+return (s);
 }
