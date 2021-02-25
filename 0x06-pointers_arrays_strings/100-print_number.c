@@ -8,26 +8,27 @@
  */
 void print_number(int n)
 {
-	int x, z;
+	unsigned int x, y, z;
 
+	y = n;
 	x = 1;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n = n * -1;
+		y = n * -1;
 	}
 
-	while (x * 10 <= n)
+	while (x * 10 <= y)
 	{
 		x = x * 10;
 	}
 
 	while (x != 0)
 	{
-		z = n / x;
+		z = y / x;
 		_putchar(z + '0');
-		n = n - z * x;
+		y = y - z * x;
 		x = x / 10;
 	}
 
