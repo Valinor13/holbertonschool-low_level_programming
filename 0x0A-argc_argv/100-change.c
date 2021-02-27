@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	s = argv[1];
 	while (*s != 00)
 	{
-		if (*s >= 48 && *s <= 57)
+		if ((*s >= 48 && *s <= 57) || (*s == 45))
 			s++;
 		else
 		{
