@@ -11,9 +11,8 @@
  */
 int main(void)
 {
-	int fd[2];
-	char buf1[58] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
+	char *buf1 = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	write(fd[2], buf1, strlen(buf1));
+	write(2, buf1, 58);
 	return (1);
 }
