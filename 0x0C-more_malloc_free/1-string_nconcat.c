@@ -16,10 +16,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	j = 0;
 
 	if (s1 == NULL)
-		*s1 = 00;
+		s1 = 00;
 
 	if (s2 == NULL)
-		*s2 = 00;
+		s2 = 00;
 
 	while (s1[i] != 00)
 		i++;
