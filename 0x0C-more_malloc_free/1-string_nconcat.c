@@ -38,10 +38,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; s1[i] != 00; i++)
 		s3[i] = s1[i];
 
-	for (x = 0; x < j; i++, x++)
-		s3[i] = s2[x];
+	for (x = 0; x <= n; x++)
+	{
+		if (x < j)
+		{
+			s3[i] = s2[x];
+			i++;
+		}
 
-	s3[i] = 00;
-
+		else
+		{
+			s3[i] = 00;
+		}
+	}
 return (s3);
 }
