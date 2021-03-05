@@ -38,10 +38,11 @@ void simple_print_buffer(char *buffer, unsigned int size)
  */
 int main(void)
 {
-    char *a;
+	char *a;
 
-    a = _calloc(98, sizeof(char));
-    strcpy(a, "Holberton");
+    a = _calloc(12, sizeof(int));
+
+ 	strcpy(a, "Holberton");
     strcpy(a + 9, " School! :)\n");
     a[97] = '!';
     simple_print_buffer(a, 98);
