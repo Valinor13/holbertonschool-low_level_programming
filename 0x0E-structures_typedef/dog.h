@@ -9,7 +9,7 @@
  * @owner: dog's owner
  * @age: dog's age
  */
-struct dog
+struct dog, dog_t
 {
 	char *name;
 	float age;
