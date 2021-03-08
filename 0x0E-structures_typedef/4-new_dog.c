@@ -12,7 +12,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int i, nlen, olen;
 	char *nuname, *nuowner;
 	float nuage;
-	struct dog *nu_dog;
+	struct dog *new_dog;
 
 	nuage = age;
 	nlen = olen = 0;
@@ -37,9 +37,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	for (i = 0; i <= olen; i++)
 		nuowner[i] = owner[i];
 
-	nu_dog->name = nuname;
-	nu_dog->age = nuage;
-	nu_dog->owner = nuowner;
+	new_dog->name = nuname;
+	new_dog->age = nuage;
+	new_dog->owner = nuowner;
 
-	return (nu_dog);
+	return (new_dog);
 }
