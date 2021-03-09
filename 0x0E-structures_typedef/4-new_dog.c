@@ -34,10 +34,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (nuowner == NULL)
 		return (NULL);
 
-	for (i = 0; i <= nlen; i++)
+	for (i = 0; i < nlen; i++)
 		nuname[i] = name[i];
 
-	for (i = 0; i <= olen; i++)
+	for (i = 0; i < olen; i++)
 		nuowner[i] = owner[i];
 
 	new_dog->name = nuname;
