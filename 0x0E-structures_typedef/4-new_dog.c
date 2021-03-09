@@ -15,7 +15,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	struct dog *new_dog;
 
 	nuage = age;
-	nlen = olen = 0;
+	nlen = olen = 1;
 
 	while (name[nlen] != 00)
 		nlen++;
