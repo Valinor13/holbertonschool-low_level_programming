@@ -10,18 +10,21 @@ void print_dog(struct dog *d)
 {
 	if (d != NULL)
 	{
-		if (d->name == NULL)
+		if (d->name != NULL)
+			printf("Name: %s\n", d->name);
+		else
 			puts("Name: nil");
 
-		else
-			printf("Name: %s\n", d->name);
+		if (d->age != NULL)
+			printf("Age: %f\n", d->age);
 
-		printf("Age: %f\n", d->age);
+		else
+			puts("Age: nil");
 
 		if (d->owner == NULL)
-			puts("Owner: nil");
+			printf("Owner: %s\n", d->owner);
 
 		else
-			printf("Owner: %s\n", d->owner);
+			puts("Owner: nil");
 	}
 }
