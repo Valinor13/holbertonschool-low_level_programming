@@ -16,17 +16,17 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	if ((argv[2][0] != '+' || argv[2][0] != '-' || argv[2][0] != '*' ||
-	argv[2][0] != '/' || argv[2][0] != '%') && argv[2][1] != 00)
+	x = atoi(argv[1]);
+	y = atoi(argv[3]);
+
+	pmath = get_op_func(argv[2]);
+
+	if (pmath == NULL)
 	{
 		puts("Error");
 		exit(99);
 	}
 
-	x = atoi(argv[1]);
-	y = atoi(argv[3]);
-
-	pmath = get_op_func(argv[2]);
 	printf("%d\n", pmath(x, y));
 
 return (0);
