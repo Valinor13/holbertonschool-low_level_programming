@@ -16,9 +16,6 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	x = atoi(argv[1]);
-	y = atoi(argv[3]);
-
 	pmath = get_op_func(argv[2]);
 
 	if (pmath == NULL)
@@ -26,6 +23,9 @@ int main(int argc, char *argv[])
 		puts("Error");
 		exit(99);
 	}
+
+	x = atoi(argv[1]);
+	y = atoi(argv[3]);
 
 	printf("%d\n", pmath(x, y));
 
