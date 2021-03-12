@@ -8,9 +8,10 @@
 void nll_chk(char *ptr)
 {
 	if (ptr == NULL)
+	{
 		printf("(nil)");
-	else
-		printf("%s", ptr);
+	}
+	printf("%s", ptr);
 }
 
 /**
