@@ -17,7 +17,7 @@ void nll_chk(char *ptr)
 
 /**
  * com_chk - checks for comma print
- * @j: input posi
+ * @count: input count
  * Return: returns void
  */
 void com_chk(int count)
