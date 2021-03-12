@@ -20,9 +20,9 @@ void nll_chk(char *ptr)
  * @j: input posi
  * Return: returns void
  */
-void com_chk(int j)
+void com_chk(int count)
 {
-	switch (j)
+	switch (count)
 	{
 		case 0:
 			break;
@@ -40,41 +40,42 @@ return;
  */
 void print_all(const char * const format, ...)
 {
-	int j;
+	int j, count;
 	va_list args;
 	char *ptr;
 
-	if (format != NULL)
+	va_start(args, format);
+	j = count = 0;
+	while (format && format[j])
 	{
-		va_start(args, format);
-		j = 0;
-		while (format[j] != 00)
+		switch (format[j])
 		{
-			switch (format[j])
+			case 'c':
+				com_chk(count);
+				printf("%c", va_arg(args, int));
+				count++;
+				break;
+			case 'i':
+				com_chk(count);
+				printf("%i", va_arg(args, int));
+				count++;
+				break;
+			case 'f':
+				com_chk(count);
+				printf("%f", va_arg(args, double));
+				count++;
+				break;
+			case 's':
 			{
-				case 'c':
-					com_chk(j);
-					printf("%c", va_arg(args, int));
-					break;
-				case 'i':
-					com_chk(j);
-					printf("%i", va_arg(args, int));
-					break;
-				case 'f':
-					com_chk(j);
-					printf("%f", va_arg(args, double));
-					break;
-				case 's':
-				{
-					com_chk(j);
-					ptr = va_arg(args, char *);
-					nll_chk(ptr);
-					break;
-				}
+				com_chk(count);
+				ptr = va_arg(args, char *);
+				nll_chk(ptr);
+				count++;
 			}
-			j++;
 		}
+		j++;
 	}
+
 	printf("\n");
 	va_end(args);
 return;
