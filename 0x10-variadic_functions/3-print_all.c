@@ -10,6 +10,7 @@ void nll_chk(char *ptr)
 	if (ptr == NULL)
 	{
 		printf("(nil)");
+		return;
 	}
 	printf("%s", ptr);
 }
