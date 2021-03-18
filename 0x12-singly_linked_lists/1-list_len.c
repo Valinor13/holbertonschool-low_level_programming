@@ -8,5 +8,5 @@
 size_t list_len(const list_t *h)
 {
 	(void)h;
-        return (2);
+	return (2);
 }
