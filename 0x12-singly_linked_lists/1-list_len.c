@@ -7,6 +7,10 @@
  */
 size_t list_len(const list_t *h)
 {
-	(void)h;
-	return (2);
+	int i;
+	const list_t *node = h;
+
+	while (h != NULL)
+		i++;
+	return (i);	
 }
