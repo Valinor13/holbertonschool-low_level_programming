@@ -12,8 +12,8 @@ void free_listint(listint_t *head)
 	while (head != NULL)
 	{
 		noodle = head->next;
-		head = noodle;
 		free(head);
+		head = noodle;
 	}
 return;
 }
