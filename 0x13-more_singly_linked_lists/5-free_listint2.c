@@ -17,6 +17,6 @@ void free_listint2(listint_t **head)
 		free(pasta);
 		pasta = noodle;
 	}
-	head = NULL;
+	*head = NULL;
 return;
 }
