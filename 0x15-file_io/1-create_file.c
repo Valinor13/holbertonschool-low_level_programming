@@ -12,16 +12,20 @@ int create_file(const char *filename, char *text_content)
 
 	if (filename == NULL)
 		return (-1);
-	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, 600);
+	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
 	if (fd == -1)
 		return (-1);
 	while (text_content[bsz])
 		bsz++;
 	bsz += 1;
-	*text_content = '\0';
+	if (bsz == 1)
+		*text_content = '\0';
 	wr = write(fd, text_content, bsz);
 	if (wr == -1)
+	{
+		close(fd);
 		return (-1);
+	}
 	close(fd);
 return (1);
 }
