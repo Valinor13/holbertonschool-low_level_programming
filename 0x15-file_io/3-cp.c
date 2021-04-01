@@ -8,10 +8,10 @@
  */
 int main(int ac, char **av)
 {
-	int file_from, file_to, wr_num, read_num, open_flags;
+	int file_from, file_to;
+	ssize_t read_num, wr_num;
 	char buff[1024];
 
-	open_flags = O_WRONLY | O_CREAT | O_TRUNC;
 	if (ac != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -23,7 +23,7 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	file_to = open(av[2], open_flags, 0664);
+	file_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (file_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't wrtie to %s\n", av[2]);
@@ -41,5 +41,5 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from), exit(100);
 	if (close(file_to == -1))
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to), exit(100);
-return (1);
+return (0);
 }
