@@ -8,7 +8,7 @@
  */
 int main(int ac, char **av)
 {
-	int file_from, file_to, wr_num, read_num, closer, open_flags;
+	int file_from, file_to, wr_num, read_num, open_flags;
 	char buff[1024];
 
 	open_flags = O_WRONLY | O_CREAT | O_TRUNC;
