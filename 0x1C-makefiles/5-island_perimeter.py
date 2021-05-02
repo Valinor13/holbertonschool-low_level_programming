@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""A module for evaluting 2d arrays"""
+
+
 def island_perimeter(grid):
     """A simple function that counts border tiles in a 0, 1 matrix"""
 
