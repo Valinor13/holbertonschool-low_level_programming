@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def island_perimeter(grid):
+    """A simple function that counts border tiles in a 0, 1 matrix"""
+
     if not grid:
         return 0
     perim = 0
