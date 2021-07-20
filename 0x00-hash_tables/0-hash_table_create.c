@@ -8,7 +8,7 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-    char *p;
+	hash_table_t *p;
 
 	if (size == 0)
 	{
