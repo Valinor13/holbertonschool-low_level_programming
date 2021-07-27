@@ -9,11 +9,8 @@
 
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
-	hash_node_t *newNode;
+	unsigned long int hash;
 
-	newNode = malloc(sizeof(newNode));
-	if (!(newNode))
-	{
-		return (NULL);
-	}
+	hash = hash_djb2(key);
+	return (hash % size);
 }
