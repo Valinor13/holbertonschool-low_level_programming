@@ -23,6 +23,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	newNode->value = strdup(value);
 
 	index = key_index((const unsigned char *)key, ht->size);
+
+	if (ht->array[index])
+		newNode->next = ht->array[index];
 	ht->array[index] = newNode;
 	return (1);
 }
