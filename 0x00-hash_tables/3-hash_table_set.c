@@ -24,8 +24,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	index = key_index((const unsigned char *)key, ht->size);
 
-	if (ht->array[index] == NULL || strcmp(ht->array[index]->key, key) == 0)
+	if (ht->array[index] == NULL)
 		ht->array[index] = newNode;
+	else if (strcmp(ht->array[index]->key, key) == 0)
+	{
+		free(ht->array[index]->key);
+		free(ht->array[index]->value);
+		free(ht->array[index]);
+		ht->array[index] = newNode;
+	}
 	else
 	{
 		newNode->next = ht->array[index];
