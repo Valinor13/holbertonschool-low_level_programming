@@ -1,0 +1,1 @@
+This is the search algorithms project located in the Holberton low level programming repository.
