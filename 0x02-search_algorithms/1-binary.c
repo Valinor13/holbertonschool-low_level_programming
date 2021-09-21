@@ -34,10 +34,10 @@ int recursive_function(int *array, size_t first, size_t last, int value)
 {
 	size_t mid = ((first + last) / 2);
 
-	print_function(array, first, last);
-
 	if (first > last)
 		return (-1);
+
+	print_function(array, first, last);
 
 	if (value == array[mid])
 		return ((int)mid);
