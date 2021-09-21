@@ -36,21 +36,21 @@ int recursive_function(int *array, size_t first, size_t last, int value)
 
 	print_function(array, first, last);
 
-	if (first == last)
+	if (first > last)
 		return (-1);
-	
-	if (value < array[mid])
-		return (recursive_function(array, first, mid - 1, value));
-	
+
+	if (value == array[mid])
+		return ((int)mid);
+
 	else if (value > array[mid])
 		return (recursive_function(array, mid + 1, last, value));
-	
+
 	else
-		return ((int)mid);
+		return (recursive_function(array, first, mid - 1, value));
 }
 
 /**
- * recursive_function - splits the array down to 1
+ * binary_search - determines if array has items before calling recursion
  * @array: incoming array
  * @size: size of array
  * @value: value of item being searched for
@@ -61,6 +61,6 @@ int binary_search(int *array, size_t size, int value)
 {
 	if (!(array))
 		return (-1);
-	
+
 	return (recursive_function(array, 0, size - 1, value));
 }
