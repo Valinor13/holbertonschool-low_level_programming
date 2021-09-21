@@ -19,24 +19,21 @@ int recursive_function(int *array, size_t first, size_t last, int value)
 
 	print_function(array, first, last);
 
-	if (value == array[mid])
-		return (mid);
-	
 	if (first == last)
 		return (-1);
 	
 	if (value < array[mid])
 		recursive_function(array, 0, mid, value);
 	
-	else
+	else if (value > array[mid])
 		recursive_function(array, mid + 1, last, value);
+	
+	else
+		return (mid);
 }
 
 int binary_search(int *array, size_t size, int value)
 {
-	size_t first;
-	size_t last;
-
 	if (!(array))
 		return (-1);
 	
