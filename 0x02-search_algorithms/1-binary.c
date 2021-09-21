@@ -40,10 +40,10 @@ int recursive_function(int *array, size_t first, size_t last, int value)
 		return (-1);
 	
 	if (value < array[mid])
-		recursive_function(array, first, mid - 1, value);
+		return (recursive_function(array, first, mid - 1, value));
 	
 	else if (value > array[mid])
-		recursive_function(array, mid + 1, last, value);
+		return (recursive_function(array, mid + 1, last, value));
 	
 	else
 		return ((int)mid);
